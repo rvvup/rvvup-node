@@ -4,3 +4,5 @@ index.ts
 .env
 tsconfig.json
 .github
+!dist/
+!dist/src
