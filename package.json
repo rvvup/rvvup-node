@@ -9,7 +9,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "node ./dist/index.js"
+    "test": "node --require ts-node/register --require dotenv/config --test ./src/client.test.ts"
   },
   "keywords": [],
   "author": "Rvvup <opensource@rvvup.com> (https://docs.rvvup.com)",
@@ -21,6 +21,7 @@
     "@types/debug": "^4.1.12",
     "@types/node": "^18.19.34",
     "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
   "dependencies": {
