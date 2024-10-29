@@ -37,7 +37,7 @@ export class RvvupClient {
 
   constructor(authToken: string, options: RvvupClientOptions = {}) {
     const jwt = jwtDecode<RvvupJwtPayload>(authToken);
-    const baseUrl = options.baseUrl ?? typeof jwt.aud !== "string" ? null : jwt.aud.replace("/graphql", "");
+    const baseUrl = options.baseUrl ?? (typeof jwt.aud !== "string" ? null : jwt.aud.replace("/graphql", ""));
     const merchantId = options.merchantId ?? jwt.merchantId;
 
     if (typeof baseUrl !== "string") {
