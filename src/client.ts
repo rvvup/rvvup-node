@@ -3,6 +3,7 @@ import { JwtPayload, jwtDecode } from "jwt-decode";
 import { Checkouts } from "./checkouts";
 import { CheckoutTemplates } from "./checkoutTemplates";
 import { PaymentLinks } from "./paymentLinks";
+import { PaymentSessions } from "./paymentSessions";
 import { Statements } from "./statements";
 import { Webhooks } from "./webhooks";
 import { createDebugger } from "./utils";
@@ -32,6 +33,7 @@ export class RvvupClient {
   readonly checkouts: Checkouts;
   readonly checkoutTemplates: CheckoutTemplates;
   readonly paymentLinks: PaymentLinks;
+  readonly paymentSessions: PaymentSessions;
   readonly statements: Statements;
   readonly webhooks: Webhooks;
 
@@ -57,6 +59,7 @@ export class RvvupClient {
     this.checkouts = new Checkouts(this);
     this.checkoutTemplates = new CheckoutTemplates(this);
     this.paymentLinks = new PaymentLinks(this);
+    this.paymentSessions = new PaymentSessions(this);
     this.statements = new Statements(this);
     this.webhooks = new Webhooks(this);
 
