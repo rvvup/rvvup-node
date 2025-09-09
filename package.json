@@ -28,5 +28,10 @@
     "@rvvup/node-openapi": "github:rvvup/rvvup-node-openapi",
     "debug": "^4.3.5",
     "jwt-decode": "^4.0.0"
+  },
+  "overrides": {
+    "@rvvup/node-openapi": {
+      "form-data": "2.5.5"
+    }
   }
 }
