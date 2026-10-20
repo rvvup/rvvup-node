@@ -14,7 +14,7 @@ export class Webhooks extends BaseApi<WebhooksApi> {
   }
 
   get(id: string) {
-    return this.api.getWebhook(id, this.client._merchantId);
+    return this.api.getWebhook(this.client._merchantId, id);
   }
 
   list({ offset, limit }: Pagination = {}) {
@@ -22,6 +22,6 @@ export class Webhooks extends BaseApi<WebhooksApi> {
   }
 
   update(id: string, input: WebhookUpdateInput) {
-    return this.api.updateWebhook(id, this.client._merchantId, input);
+    return this.api.updateWebhook(this.client._merchantId, id, input);
   }
 }

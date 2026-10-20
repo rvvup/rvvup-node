@@ -21,6 +21,10 @@ export class Checkouts extends BaseApi<CheckoutsApi> {
     return this.api.listCheckouts(this.client._merchantId, offset, limit);
   }
 
+  theme(id: string) {
+    return this.api.getThemeForCheckout(this.client._merchantId, id);
+  }
+
   paymentMethods(id: string, { offset, limit }: Pagination = {}) {
     return this.api.listCheckoutPaymentMethods(id, this.client._merchantId, offset, limit);
   }
