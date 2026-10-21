@@ -6,7 +6,7 @@ on:
 
 jobs:
   publish-npm:
-    name: "Publish to npm"
+    name: "Stage package on npm"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -21,6 +21,6 @@ jobs:
         env:
           TEST_RVVUP_API_KEY: ${{ secrets.TEST_RVVUP_API_KEY }}
 
-      - run: npm publish --access public
+      - run: npm stage publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
