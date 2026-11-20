@@ -32,7 +32,7 @@
   "overrides": {
     "@rvvup/node-openapi": {
       "form-data": "2.5.5",
-      "ajv": "8.18.0"
+      "ajv": "8.20.0"
     }
   }
 }
